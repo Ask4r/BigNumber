@@ -1,0 +1,3 @@
+C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/CMakeFiles/big_number_arithmetic.dir
+C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,20 @@
+# ninja log v5
+7	1061	7284883129684084	CMakeFiles/big_number_arithmetic.dir/main.cpp.obj	a734ba692dfc1ce8
+24	2107	7284874362346629	CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj	d4c8f408476d4e56
+1062	1321	7284883132217664	big_number_arithmetic.exe	3b83b1905eb301d6
+34	2311	7284570740096095	CMakeFiles/big_number_arithmetic.dir/big-number/polymorphisms/BigNumberPolymorphisms.cpp.obj	79d130ad52da313b
+1	203	7283534843036432	build.ninja	42b4d3957e1cbd2c
+3	1129	7283099511793693	CMakeFiles/big_number_arithmetic.dir/BigNumber.cpp.obj	94c309e41afcf40f
+28	1477	7284570731740957	CMakeFiles/big_number_arithmetic.dir/big-number/BigNumber.cpp.obj	f3710b9c129f4931
+12	1298	7284578719951110	CMakeFiles/big_number_arithmetic.dir/big-number/addition-and-subtraction/BigNumberAdditionAndSubtraction.cpp.obj	222c56e40aca5478
+1516	2738	7284570744409393	CMakeFiles/big_number_arithmetic.dir/big-number/getters/BigNumberGetters.cpp.obj	5632acda549cda24
+6	1203	7284879144052734	CMakeFiles/big_number_arithmetic.dir/big-number/constructors/BigNumberConstructors.cpp.obj	516f9cf27cba7020
+13	1494	7284570731870301	CMakeFiles/big_number_arithmetic.dir/big-number/representation/BigNumberRepresentation.cpp.obj	5fc7d0cc0ca4946
+5	983	7284601805155250	CMakeFiles/big_number_arithmetic.dir/big-number/multiplication-and-division/BigNumberMultiplicationAndDivision.cpp.obj	df6e656dde955e20
+1737	2894	7284570745963491	CMakeFiles/big_number_arithmetic.dir/big-number/comparison/BigNumberComparison.cpp.obj	3c798a99d1721056
+9	1541	7284887950817478	CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj	d4c8f408476d4e56
+1542	1839	7284887953742265	big_number_arithmetic.exe	3b83b1905eb301d6
+9	1627	7284888288069602	CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj	d4c8f408476d4e56
+1628	1900	7284888290713659	big_number_arithmetic.exe	3b83b1905eb301d6
+8	1657	7284888596497867	CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj	d4c8f408476d4e56
+1658	1927	7284888599164174	big_number_arithmetic.exe	3b83b1905eb301d6
