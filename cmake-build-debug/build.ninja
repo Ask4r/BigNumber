@@ -61,53 +61,11 @@ build CMakeFiles/big_number_arithmetic.dir/big-number/BigNumber.cpp.obj: CXX_COM
   OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
   OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number
 
-build CMakeFiles/big_number_arithmetic.dir/big-number/addition-and-subtraction/BigNumberAdditionAndSubtraction.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/addition-and-subtraction/BigNumberAdditionAndSubtraction.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\addition-and-subtraction\BigNumberAdditionAndSubtraction.cpp.obj.d
+build CMakeFiles/big_number_arithmetic.dir/big-number/vector-utils/VectorUtils.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/vector-utils/VectorUtils.cpp || cmake_object_order_depends_target_big_number_arithmetic
+  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\vector-utils\VectorUtils.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\addition-and-subtraction
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/constructors/BigNumberConstructors.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/constructors/BigNumberConstructors.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\constructors\BigNumberConstructors.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\constructors
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/representation/BigNumberRepresentation.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/representation/BigNumberRepresentation.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\representation\BigNumberRepresentation.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\representation
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/utils/BigNumberUtils.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\utils\BigNumberUtils.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\utils
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/getters/BigNumberGetters.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/getters/BigNumberGetters.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\getters\BigNumberGetters.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\getters
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/polymorphisms/BigNumberPolymorphisms.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/polymorphisms/BigNumberPolymorphisms.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\polymorphisms\BigNumberPolymorphisms.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\polymorphisms
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/multiplication-and-division/BigNumberMultiplicationAndDivision.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/multiplication-and-division/BigNumberMultiplicationAndDivision.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\multiplication-and-division\BigNumberMultiplicationAndDivision.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\multiplication-and-division
-
-build CMakeFiles/big_number_arithmetic.dir/big-number/comparison/BigNumberComparison.cpp.obj: CXX_COMPILER__big_number_arithmetic_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/big-number/comparison/BigNumberComparison.cpp || cmake_object_order_depends_target_big_number_arithmetic
-  DEP_FILE = CMakeFiles\big_number_arithmetic.dir\big-number\comparison\BigNumberComparison.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
-  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\comparison
+  OBJECT_FILE_DIR = CMakeFiles\big_number_arithmetic.dir\big-number\vector-utils
 
 
 # =============================================================================
@@ -117,7 +75,7 @@ build CMakeFiles/big_number_arithmetic.dir/big-number/comparison/BigNumberCompar
 #############################################
 # Link the executable big_number_arithmetic.exe
 
-build big_number_arithmetic.exe: CXX_EXECUTABLE_LINKER__big_number_arithmetic_Debug CMakeFiles/big_number_arithmetic.dir/main.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/BigNumber.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/addition-and-subtraction/BigNumberAdditionAndSubtraction.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/constructors/BigNumberConstructors.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/representation/BigNumberRepresentation.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/utils/BigNumberUtils.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/getters/BigNumberGetters.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/polymorphisms/BigNumberPolymorphisms.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/multiplication-and-division/BigNumberMultiplicationAndDivision.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/comparison/BigNumberComparison.cpp.obj
+build big_number_arithmetic.exe: CXX_EXECUTABLE_LINKER__big_number_arithmetic_Debug CMakeFiles/big_number_arithmetic.dir/main.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/BigNumber.cpp.obj CMakeFiles/big_number_arithmetic.dir/big-number/vector-utils/VectorUtils.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\big_number_arithmetic.dir
