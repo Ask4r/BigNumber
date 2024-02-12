@@ -1,48 +1,66 @@
-#include "big-number/BigNumber.h"
-
+#include "big_number.h"
 #include <iostream>
-
+#include <chrono>
 
 int main() {
 
-    uint64_t precision = 64;
-    // uint64_t precision = 384; // 115 decimal digits
+    const uint64_t precision = 5 * 64; // 115 decimal digits
 
-    /*BigNumber::BigNumber x(1.0, precision);
-    BigNumber::BigNumber y(3.0, precision);
+    BigNumber::BigNumber x("2", precision);
 
-    x /= y;
+    x = sqrt(x);
 
-    std::cout << x << std::endl;*/
+    std::cout << x << std::endl;
 
-    BigNumber::BigNumber pi(precision);
-    BigNumber::BigNumber upper_limit(5.0, precision);
-    BigNumber::BigNumber inverse_16(0.0625, precision);
-    BigNumber::BigNumber _8(8.0, precision);
-    BigNumber::BigNumber _6(6.0, precision);
-    BigNumber::BigNumber _5(5.0, precision);
-    BigNumber::BigNumber _4(4.0, precision);
-    BigNumber::BigNumber _2(2.0, precision);
-    BigNumber::BigNumber _1(1.0, precision);
+    /*const auto start = std::chrono::high_resolution_clock::now();
 
-    pi = _4 - _2 / _4 - _1 / _5 - _1 / _6;
+    BigNumber::BigNumber _12_inv_pi(0, precision);
 
-    BigNumber::BigNumber k(precision);
-    for (k = BigNumber::BigNumber(1.0, precision); k < upper_limit; k += _1) {
-        pi += inverse_16 * (_4 / (_8 * k + _1)
-                            - _2 / (_8 * k + _4)
-                            - _1 / (_8 * k + _5)
-                            - _1 / (_8 * k + _6));
-        std::cout << (_4 / (_8 * k + _1)
-                      - _2 / (_8 * k + _4)
-                      - _1 / (_8 * k + _5)
-                      - _1 / (_8 * k + _6)) << std::endl;
-        std::cout << (k < upper_limit) << std::endl;
-        std::cout << std::endl;
-        inverse_16 *= inverse_16;
+    BigNumber::BigNumber _6k_f(1, precision);
+    BigNumber::BigNumber _3k_f(1, precision);
+    BigNumber::BigNumber _k_f_cube_f(1, precision);
+    BigNumber::BigNumber sum_k(13591409, precision);
+    BigNumber::BigNumber k_mul(545140134, precision);
+    BigNumber::BigNumber div_k = pow(BigNumber::BigNumber(640320, precision), 3);
+
+    for (size_t i = 1; i < 10; ++i) {
+        if (i % 2 == 0) {
+            _12_inv_pi += (_6k_f * sum_k) / (_3k_f * _k_f_cube_f * sqrt(pow(div_k, i + 1)));
+        } else {
+            _12_inv_pi -= (_6k_f * sum_k) / (_3k_f * _k_f_cube_f * sqrt(pow(div_k, i + 1)));
+        }
+        if (i == 0)
+            continue;
+        _3k_f *= 3 * i;
+        _6k_f *= 6 * i;
+        _k_f_cube_f *= i * i * i;
+        sum_k += k_mul;
     }
 
+
+    const auto end = std::chrono::high_resolution_clock::now();*/
+
+
+
+    /*const auto start = std::chrono::high_resolution_clock::now();
+
+    BigNumber::BigNumber _1(1ull, precision);
+    BigNumber::BigNumber _20(20ull, precision);
+    BigNumber::BigNumber _32(32ull, precision);
+    BigNumber::BigNumber _48(48ull, precision);
+    BigNumber::BigNumber _1_18 = _1 / 18;
+    BigNumber::BigNumber _1_57 = _1 / 57;
+    BigNumber::BigNumber _1_239 = _1 / 239;
+
+    BigNumber::BigNumber pi = _48 * arctan(_1_18)
+                              + _32 * arctan(_1_57)
+                              - _20 * arctan(_1_239);
+
+    const auto end = std::chrono::high_resolution_clock::now();
+
     std::cout << pi << std::endl;
+    std::cout << std::endl;
+    std::cout << (end - start) / 1'000'000 << std::endl;*/
 
     return 0;
 }

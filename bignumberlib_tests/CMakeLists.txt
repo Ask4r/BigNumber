@@ -1,0 +1,7 @@
+project(bignumberlib_tests)
+add_subdirectory(googletest)
+
+add_executable(bignumber_tests_run big_number_test.cpp)
+
+target_link_libraries(bignumber_tests_run bignumberlib_lib)
+target_link_libraries(bignumber_tests_run gtest gtest_main)

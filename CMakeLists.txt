@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.27)
-project(big_number_arithmetic)
+project(bignumber)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(big_number_arithmetic main.cpp
-        big-number/BigNumber.cpp
-        big-number/BigNumber.h
-        big-number/vector-utils/VectorUtils.cpp
-        big-number/vector-utils/VectorUtils.h
-)
+set(SOURCE_FILES main.cpp)
+add_executable(bignumber_run ${SOURCE_FILES})
+
+include_directories(bignumberlib)
+add_subdirectory(bignumberlib)
+target_link_libraries(bignumber_run bignumberlib_lib)
+
+add_subdirectory(bignumberlib_tests)
