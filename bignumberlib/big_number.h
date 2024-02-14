@@ -25,21 +25,23 @@ namespace BigNumber {
         void add_positive(const BigNumber&);
         void subtract_positive(const BigNumber&);
 
+        // Other
+        void normalise();
+
      public:
 
         // Constructors
-        explicit BigNumber(uint64_t);
-        explicit BigNumber(const char *, uint64_t);
-        explicit BigNumber(float, uint64_t);
-        explicit BigNumber(double, uint64_t);
-        explicit BigNumber(int8_t, uint64_t);
-        explicit BigNumber(int16_t, uint64_t);
-        explicit BigNumber(int32_t , uint64_t);
-        explicit BigNumber(int64_t, uint64_t);
-        explicit BigNumber(uint8_t, uint64_t);
-        explicit BigNumber(uint16_t, uint64_t);
-        explicit BigNumber(uint32_t , uint64_t);
-        explicit BigNumber(uint64_t, uint64_t);
+        explicit BigNumber(const char *, uint64_t = 128);
+        explicit BigNumber(float, uint64_t = 128);
+        explicit BigNumber(double, uint64_t = 128);
+        explicit BigNumber(int8_t, uint64_t = 128);
+        explicit BigNumber(int16_t, uint64_t = 128);
+        explicit BigNumber(int32_t, uint64_t = 128);
+        explicit BigNumber(int64_t, uint64_t = 128);
+        explicit BigNumber(uint8_t, uint64_t = 128);
+        explicit BigNumber(uint16_t, uint64_t = 128);
+        explicit BigNumber(uint32_t, uint64_t = 128);
+        explicit BigNumber(uint64_t, uint64_t = 128);
         BigNumber(const BigNumber&);
         BigNumber(BigNumber&&) noexcept;
 
@@ -57,7 +59,7 @@ namespace BigNumber {
         friend BigNumber abs(const BigNumber&);
         friend BigNumber floor(const BigNumber&);
         friend BigNumber ceil(const BigNumber&);
-        friend BigNumber sqrt(const BigNumber&);
+        // friend BigNumber sqrt(const BigNumber&);
         friend BigNumber pow(const BigNumber&, uint64_t);
         friend BigNumber arctan(const BigNumber&);
         friend BigNumber factorial(const BigNumber&);
@@ -88,5 +90,9 @@ namespace BigNumber {
         // Adapters
         [[nodiscard]] std::string to_string() const;
     };
-
 }
+
+// UD literals
+BigNumber::BigNumber operator""_b(const char *);
+BigNumber::BigNumber operator""_b(long double);
+BigNumber::BigNumber operator""_b(unsigned long long int);

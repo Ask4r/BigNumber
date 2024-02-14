@@ -11,6 +11,7 @@ namespace BigNumber::VectorUtils {
     bool is_null(const std::vector<uint64_t>&);
     void shift_left(std::vector<uint64_t>&, uint64_t);
     void shift_right(std::vector<uint64_t>&, uint64_t);
+    void half_shift_right(std::vector<uint64_t>&);
     uint64_t normalise_mantissa(std::vector<uint64_t>&, uint64_t);
     void align_fraction_mantissa(std::vector<uint64_t>& self);
     std::strong_ordering compare_vectors(const std::vector<uint64_t>&, const std::vector<uint64_t>&);

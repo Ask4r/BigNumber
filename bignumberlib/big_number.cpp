@@ -2,14 +2,6 @@
 
 namespace BigNumber {
 
-    // Constructors
-    BigNumber::BigNumber(uint64_t precision) {
-        size_t mantissa_size = precision / 64 + (precision % 64 > 0);
-        mantissa.resize(mantissa_size, 0);
-        sign = 0;
-        exponent = 0;
-    }
-
     BigNumber::BigNumber(const char *s, uint64_t precision) {
         size_t mantissa_size = precision / 64 + (precision % 64 > 0);
         std::istringstream iss(s);
@@ -156,7 +148,8 @@ namespace BigNumber {
             return number;
         BigNumber result = number;
         VectorUtils::shift_left(result.mantissa, -result.exponent);
-        result.exponent = 0;
+        const uint64_t shift = VectorUtils::normalise_mantissa(result.mantissa, number.mantissa.size());
+        result.exponent = static_cast<int64_t>(shift);
         return result;
     }
 
@@ -172,49 +165,55 @@ namespace BigNumber {
         }
         BigNumber result = number;
         VectorUtils::shift_left(result.mantissa, -result.exponent);
-        result.exponent = 0;
+        const uint64_t shift = VectorUtils::normalise_mantissa(result.mantissa, number.mantissa.size());
+        result.exponent = static_cast<int64_t>(shift);
         if (rounded)
             result += 1;
         return result;
     }
 
-    BigNumber sqrt(const BigNumber& number) {
+    /*BigNumber sqrt(const BigNumber& number) {
+        const int64_t initial_exponent = number.exponent;
         BigNumber one(1, number.mantissa.size() * 3 * 64);
         BigNumber half(0.5, number.mantissa.size() * 3 * 64);
         BigNumber start(1, number.mantissa.size() * 3 * 64);
-        BigNumber end = number * half;
+        BigNumber end = number;
+        end.exponent = static_cast<int64_t>(number.mantissa.size() * 2);
         end.mantissa.resize(number.mantissa.size() * 3, 0);
-        end.exponent += number.mantissa.size() * 2;
-        BigNumber mid(number.mantissa.size() * 3 * 64);
-        BigNumber square(number.mantissa.size() * 3 * 64);
-        BigNumber ans(number.mantissa.size() * 3 * 64);
+        BigNumber target = end;
+        BigNumber mid(0, number.mantissa.size() * 3 * 64);
+        BigNumber square(0, number.mantissa.size() * 3 * 64);
+        BigNumber ans(0, number.mantissa.size() * 3 * 64);
         while (start <= end) {
             mid = floor((start + end) * half);
             square = mid * mid;
-            if (square == number) {
+            if (square == target) {
                 ans = mid;
                 break;
             }
-            if (square <= number) {
+            if (square < target) {
                 start = mid + one;
                 ans = mid;
             } else {
                 end = mid - one;
             }
         }
-        ans.exponent -= static_cast<int64_t>(number.mantissa.size());
+        if (initial_exponent % 2 != 0)
+            VectorUtils::half_shift_right(ans.mantissa);
+        const uint64_t shift = VectorUtils::normalise_mantissa(ans.mantissa, number.mantissa.size());
+        ans.exponent = initial_exponent / 2
+                       - static_cast<int64_t>(number.mantissa.size())
+                       + static_cast<int64_t>(shift);
         return ans;
-    }
+    }*/
 
     BigNumber pow(const BigNumber& number, uint64_t pow) {
-        if (pow == 0) {
-            BigNumber result(1, number.mantissa.size() * 64);
+        BigNumber result(1, number.mantissa.size() * 64);
+        if (pow == 0)
             return result;
-        }
-        BigNumber result = number;
         BigNumber multiplier = number;
-        while (pow != 0) {
-            if (pow % 2 == 1)
+        while (pow > 0) {
+            if (pow & 1)
                 result *= multiplier;
             multiplier *= multiplier;
             pow >>= 1;
@@ -223,25 +222,31 @@ namespace BigNumber {
     }
 
     BigNumber arctan(const BigNumber& number) {
-        BigNumber result = number;
+        BigNumber result(0.0, number.mantissa.size() * 64);
         BigNumber next_result = number;
         BigNumber summand = number;
         uint64_t n = 2;
+        size_t identity_count = 0;
         do {
             result = next_result;
-            summand *= ((number * number) * (n + n - 3)) / (n + n - 1);
+            summand *= (number * number * (n + n - 3)) / (n + n - 1);
             if (n % 2 == 1)
                 next_result += summand;
             else
                 next_result -= summand;
             ++n;
-        } while (result != next_result);
+            if (result.mantissa.size() < (result.exponent - summand.exponent)) {
+                ++identity_count;
+            } else {
+                identity_count = 0;
+            }
+        } while (identity_count < 10);
         return result;
     }
 
     BigNumber factorial(const BigNumber& number) {
         if (number.exponent < 0)
-            return BigNumber(number.mantissa.size() * 64);
+            return BigNumber(0, number.mantissa.size() * 64);
         if (number.is_null())
             return BigNumber(1, number.mantissa.size() * 64);
         BigNumber result(1, number.mantissa.size() * 64);
@@ -256,31 +261,54 @@ namespace BigNumber {
 
     // Addition and subtraction
     void BigNumber::add_positive(const BigNumber& number) {
+        const uint64_t initial_size = mantissa.size();
         BigNumber summand = number;
-        summand.mantissa.resize(mantissa.size(), 0);
+        uint64_t calc_size;
         if (exponent < summand.exponent) {
-            VectorUtils::shift_left(mantissa, summand.exponent - exponent);
-            exponent = summand.exponent;
+            calc_size = std::max(mantissa.size() + summand.exponent - exponent,
+                                 summand.mantissa.size());
+            summand.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
+            VectorUtils::shift_right(summand.mantissa, summand.exponent - exponent);
         } else if (exponent > summand.exponent) {
-            VectorUtils::shift_left(summand.mantissa, exponent - summand.exponent);
+            calc_size = std::max(summand.mantissa.size() + exponent - summand.exponent,
+                                 mantissa.size());
+            summand.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
+            VectorUtils::shift_right(mantissa, exponent - summand.exponent);
+            exponent = summand.exponent;
+        } else {
+            calc_size = std::max(summand.mantissa.size(), mantissa.size());
+            summand.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
         }
         const uint64_t carry = VectorUtils::add_vector(mantissa, summand.mantissa);
-        if (carry != 0) {
-            VectorUtils::shift_left(mantissa, 1);
-            mantissa.back() = 1;
-            exponent -= 1;
-        }
+        if (carry != 0)
+            mantissa.push_back(1);
+        const uint64_t shift = VectorUtils::normalise_mantissa(mantissa, initial_size);
+        exponent += static_cast<int64_t>(shift);
     }
 
     void BigNumber::subtract_positive(const BigNumber& number) {
         const uint64_t initial_size = mantissa.size();
         BigNumber subtrahend = number;
-        subtrahend.mantissa.resize(mantissa.size());
         if (exponent < subtrahend.exponent) {
-            VectorUtils::shift_left(mantissa, subtrahend.exponent - exponent);
-            exponent = subtrahend.exponent;
+            const uint64_t calc_size = std::max(mantissa.size() + subtrahend.exponent - exponent,
+                                                subtrahend.mantissa.size());
+            subtrahend.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
+            VectorUtils::shift_right(subtrahend.mantissa, subtrahend.exponent - exponent);
         } else if (exponent > subtrahend.exponent) {
-            VectorUtils::shift_left(subtrahend.mantissa, exponent - subtrahend.exponent);
+            const uint64_t calc_size = std::max(subtrahend.mantissa.size() + exponent - subtrahend.exponent,
+                                                mantissa.size());
+            subtrahend.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
+            VectorUtils::shift_right(mantissa, exponent - subtrahend.exponent);
+            exponent = subtrahend.exponent;
+        } else {
+            const uint64_t calc_size = std::max(subtrahend.mantissa.size(), mantissa.size());
+            subtrahend.mantissa.resize(calc_size, 0);
+            mantissa.resize(calc_size, 0);
         }
         VectorUtils::subtract_vector(mantissa, subtrahend.mantissa);
         const uint64_t shift = VectorUtils::normalise_mantissa(mantissa, initial_size);
@@ -362,6 +390,8 @@ namespace BigNumber {
     }
 
     BigNumber& operator/=(BigNumber& self, const BigNumber& other) {
+        if (other.is_null())
+            throw std::runtime_error("Division by zero");
         const uint64_t initial_size = self.mantissa.size();
         std::vector<uint64_t> dividend = self.mantissa;
         dividend.resize(initial_size << 1, 0);
@@ -387,7 +417,7 @@ namespace BigNumber {
 
     BigNumber operator*(const BigNumber& self, uint64_t number) {
         const uint64_t initial_size = self.mantissa.size();
-        BigNumber result(initial_size);
+        BigNumber result(0, initial_size);
         result.mantissa = VectorUtils::multiply_vectors(self.mantissa,
                                                         std::vector<uint64_t>(1, number));
         const uint64_t shift = VectorUtils::normalise_mantissa(result.mantissa, initial_size);
@@ -411,17 +441,25 @@ namespace BigNumber {
     std::strong_ordering operator<=>(const BigNumber& lhs, const BigNumber& rhs) {
         if (lhs.is_null() && rhs.is_null())
             return std::strong_ordering::equal;
-        if (lhs.sign > 0 && rhs.sign == 0)
+        if (lhs.sign != 0 && rhs.sign == 0)
             return std::strong_ordering::less;
-        if (lhs.sign == 0 && rhs.sign > 0)
+        if (lhs.sign == 0 && rhs.sign != 0)
             return std::strong_ordering::greater;
         BigNumber lhs_copy = lhs;
-        const uint64_t borrow = VectorUtils::subtract_vector(lhs_copy.mantissa, rhs.mantissa);
-        if (borrow != 0)
-            return std::strong_ordering::less;
-        if (lhs_copy.is_null())
-            return std::strong_ordering::equal;
-        return std::strong_ordering::greater;
+        BigNumber rhs_copy = rhs;
+        lhs_copy.normalise();
+        rhs_copy.normalise();
+        const uint64_t comp_diff = std::abs(lhs.exponent - rhs.exponent);
+        const uint64_t comp_size = std::max(lhs.mantissa.size(), rhs.mantissa.size()) + comp_diff;
+        lhs_copy.mantissa.resize(comp_size, 0);
+        rhs_copy.mantissa.resize(comp_size, 0);
+        if (lhs.exponent < rhs.exponent) {
+            VectorUtils::shift_right(rhs_copy.mantissa, rhs.exponent - lhs.exponent);
+        } else if (lhs.exponent > rhs.exponent) {
+            VectorUtils::shift_right(lhs_copy.mantissa, lhs.exponent - rhs.exponent);
+        }
+        const std::strong_ordering result = VectorUtils::compare_vectors(lhs_copy.mantissa, rhs_copy.mantissa);
+        return result;
     }
 
     bool operator==(const BigNumber& lhs, const BigNumber& rhs) {
@@ -438,10 +476,15 @@ namespace BigNumber {
 
     // Adapters
     std::string BigNumber::to_string() const {
+        if (is_null())
+            return "0";
         std::string result;
         std::vector<uint64_t> integer;
         if (exponent <= 0) {
-            integer = std::vector(mantissa.begin() - exponent, mantissa.end());
+            if (-exponent > mantissa.size() - 1)
+                integer = { 0 };
+            else
+                integer = std::vector(mantissa.begin() - exponent, mantissa.end());
         } else {
             integer = mantissa;
             VectorUtils::extend(integer, std::vector<uint64_t>(exponent, 0));
@@ -450,9 +493,8 @@ namespace BigNumber {
                 integer.pop_back();
         }
         std::vector<uint64_t> ten = { 10 };
-        while (!VectorUtils::is_null(integer)) {
+        while (!VectorUtils::is_null(integer))
             result.append(std::to_string(VectorUtils::modulo_vector(integer, ten)[0]));
-        }
         if (result.empty())
             result.append("0");
         if (sign != 0)
@@ -461,7 +503,7 @@ namespace BigNumber {
         if (exponent >= 0)
             return result;
         std::vector<uint64_t> fraction(mantissa.begin(), mantissa.begin() - exponent);
-        if (fraction.empty())
+        if (fraction.empty() || VectorUtils::is_null(fraction))
             return result;
         result.append(".");
         fraction.push_back(0);
@@ -474,4 +516,25 @@ namespace BigNumber {
         return result;
     }
 
+    // Other
+    void BigNumber::normalise() {
+        if (is_null())
+            return;
+        const uint64_t shift = VectorUtils::normalise_mantissa(mantissa, mantissa.size());
+        exponent += static_cast<int64_t>(shift);
+    }
+}
+
+
+// UD Literals
+BigNumber::BigNumber operator ""_b(const char *s) {
+    return BigNumber::BigNumber(s);
+}
+
+BigNumber::BigNumber operator ""_b(long double number) {
+    return BigNumber::BigNumber(static_cast<double>(number));
+}
+
+BigNumber::BigNumber operator ""_b(unsigned long long int number) {
+    return BigNumber::BigNumber(number);
 }

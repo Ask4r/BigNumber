@@ -21,6 +21,17 @@ namespace BigNumber::VectorUtils {
         std::fill(self.begin(), self.begin() + shift, 0);
     }
 
+    void half_shift_right(std::vector<uint64_t>& self) {
+        uint64_t carry = 0;
+        uint64_t next_carry;
+        for (uint64_t chunk : self) {
+            next_carry = (chunk & 0xFFFF'FFFF'0000'0000) >> 32;
+            chunk <<= 32;
+            chunk += carry;
+            carry = next_carry;
+        }
+    }
+
     uint64_t normalise_mantissa(std::vector<uint64_t>& self, uint64_t desired) {
         if (is_null(self))
             return 0;
