@@ -114,7 +114,7 @@ namespace BigNumber {
         return sign != 0;
     }
 
-    bool BigNumber::is_null() const {
+    bool BigNumber::is_zero() const {
         return VectorUtils::is_null(mantissa);
     }
 
@@ -247,7 +247,7 @@ namespace BigNumber {
     BigNumber factorial(const BigNumber& number) {
         if (number.exponent < 0)
             return BigNumber(0, number.mantissa.size() * 64);
-        if (number.is_null())
+        if (number.is_zero())
             return BigNumber(1, number.mantissa.size() * 64);
         BigNumber result(1, number.mantissa.size() * 64);
         BigNumber i(1, number.mantissa.size() * 64);
@@ -390,7 +390,7 @@ namespace BigNumber {
     }
 
     BigNumber& operator/=(BigNumber& self, const BigNumber& other) {
-        if (other.is_null())
+        if (other.is_zero())
             throw std::runtime_error("Division by zero");
         const uint64_t initial_size = self.mantissa.size();
         std::vector<uint64_t> dividend = self.mantissa;
@@ -439,7 +439,7 @@ namespace BigNumber {
 
     // Comparison
     std::strong_ordering operator<=>(const BigNumber& lhs, const BigNumber& rhs) {
-        if (lhs.is_null() && rhs.is_null())
+        if (lhs.is_zero() && rhs.is_zero())
             return std::strong_ordering::equal;
         if (lhs.sign != 0 && rhs.sign == 0)
             return std::strong_ordering::less;
@@ -476,7 +476,7 @@ namespace BigNumber {
 
     // Adapters
     std::string BigNumber::to_string() const {
-        if (is_null())
+        if (is_zero())
             return "0";
         std::string result;
         std::vector<uint64_t> integer;
@@ -518,7 +518,7 @@ namespace BigNumber {
 
     // Other
     void BigNumber::normalise() {
-        if (is_null())
+        if (is_zero())
             return;
         const uint64_t shift = VectorUtils::normalise_mantissa(mantissa, mantissa.size());
         exponent += static_cast<int64_t>(shift);

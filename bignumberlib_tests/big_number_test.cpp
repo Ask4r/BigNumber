@@ -117,8 +117,8 @@ TEST(BigNumberTest, SignGetter) {
 TEST(BigNumberTest, IsNull) {
     BigNumber::BigNumber a("0", precision);
     BigNumber::BigNumber b("12345678901234567890123456789012345678901234567890", precision);
-    EXPECT_TRUE(a.is_null());
-    EXPECT_FALSE(b.is_null());
+    EXPECT_TRUE(a.is_zero());
+    EXPECT_FALSE(b.is_zero());
 }
 
 // Direct assignment
@@ -127,7 +127,7 @@ TEST(BigNumberTest, DirectAssignment) {
     BigNumber::BigNumber b = a;
     EXPECT_EQ("12345678901234567890123456789012345678901234567890", b.to_string());
 
-    BigNumber::BigNumber c = BigNumber::BigNumber("-12345678901234567890123456789012345678901234567890", precision);
+    BigNumber::BigNumber c = std::move(BigNumber::BigNumber("-12345678901234567890123456789012345678901234567890", precision));
     EXPECT_EQ("-12345678901234567890123456789012345678901234567890", c.to_string());
 }
 
@@ -244,11 +244,11 @@ TEST(BigNumberTest, Div) {
     EXPECT_EQ("1", c.to_string());
 }
 
-// TEST(BigNumberTest, DivByZero) {
-//     BigNumber::BigNumber a("12345678901234567890123456789012345678901234567890", precision);
-//     BigNumber::BigNumber b("0", precision);
-//     EXPECT_THROW(std::runtime_error, a / b);
-// }
+TEST(BigNumberTest, DivByZero) {
+    BigNumber::BigNumber a("12345678901234567890123456789012345678901234567890", precision);
+    BigNumber::BigNumber b("0", precision);
+    EXPECT_ANY_THROW(a / b);
+}
 
 // Comparison
 TEST(BigNumberTest, Equal) {

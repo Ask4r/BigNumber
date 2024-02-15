@@ -48,7 +48,7 @@ namespace BigNumber {
         // Getters
         [[nodiscard]] bool is_positive() const;
         [[nodiscard]] bool is_negative() const;
-        [[nodiscard]] bool is_null() const;
+        [[nodiscard]] bool is_zero() const;
 
         // Direct assignment
         BigNumber& operator=(const BigNumber&);
