@@ -364,43 +364,43 @@ bignumberlib_IS_TOP_LEVEL:STATIC=OFF
 bignumberlib_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib
 
 //Value Computed by CMake
-bignumberlib_tests_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests
+bignumberlib_tests_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests
 
 //Value Computed by CMake
 bignumberlib_tests_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-bignumberlib_tests_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests
+bignumberlib_tests_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest/googlemock
+gmock_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock
+gmock_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest
+googletest-distribution_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest
+googletest-distribution_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest/googletest
+gtest_BINARY_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
+gtest_SOURCE_DIR:STATIC=C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -636,7 +636,7 @@ _Python_INTERPRETER_SIGNATURE:INTERNAL=778943685977ff2e84ad3e837d11ebd8
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest/googletest/generated
+generated_dir:INTERNAL=C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

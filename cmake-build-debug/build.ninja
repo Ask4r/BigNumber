@@ -345,7 +345,7 @@ build bignumberlib/vectorutilslib/install/strip: phony bignumberlib/vectorutilsl
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Alexander/CLionProjects/big-number-arithmetic/CMakeLists.txt
+# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -357,12 +357,12 @@ build bignumberlib/vectorutilslib/install/strip: phony bignumberlib/vectorutilsl
 
 build cmake_object_order_depends_target_bignumber_tests_run: phony || cmake_object_order_depends_target_bignumberlib_lib cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_vectorutilslib_lib
 
-build bignumberlib_tests/CMakeFiles/bignumber_tests_run.dir/big_number_test.cpp.obj: CXX_COMPILER__bignumber_tests_run_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/big_number_test.cpp || cmake_object_order_depends_target_bignumber_tests_run
-  DEP_FILE = bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir\big_number_test.cpp.obj.d
+build bignumberlib/bignumberlib_tests/CMakeFiles/bignumber_tests_run.dir/big_number_test.cpp.obj: CXX_COMPILER__bignumber_tests_run_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/big_number_test.cpp || cmake_object_order_depends_target_bignumber_tests_run
+  DEP_FILE = bignumberlib\bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir\big_number_test.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
-  OBJECT_DIR = bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
-  OBJECT_FILE_DIR = bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
+  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
+  OBJECT_FILE_DIR = bignumberlib\bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
 
 
 # =============================================================================
@@ -370,156 +370,156 @@ build bignumberlib_tests/CMakeFiles/bignumber_tests_run.dir/big_number_test.cpp.
 
 
 #############################################
-# Link the executable bignumberlib_tests\bignumber_tests_run.exe
+# Link the executable bignumberlib\bignumberlib_tests\bignumber_tests_run.exe
 
-build bignumberlib_tests/bignumber_tests_run.exe: CXX_EXECUTABLE_LINKER__bignumber_tests_run_Debug bignumberlib_tests/CMakeFiles/bignumber_tests_run.dir/big_number_test.cpp.obj | bignumberlib/libbignumberlib_lib.a lib/libgtest.a lib/libgtest_main.a bignumberlib/vectorutilslib/libvectorutilslib_lib.a lib/libgtest.a || bignumberlib/libbignumberlib_lib.a bignumberlib/vectorutilslib/libvectorutilslib_lib.a lib/libgtest.a lib/libgtest_main.a
+build bignumberlib/bignumberlib_tests/bignumber_tests_run.exe: CXX_EXECUTABLE_LINKER__bignumber_tests_run_Debug bignumberlib/bignumberlib_tests/CMakeFiles/bignumber_tests_run.dir/big_number_test.cpp.obj | bignumberlib/libbignumberlib_lib.a lib/libgtest.a lib/libgtest_main.a bignumberlib/vectorutilslib/libvectorutilslib_lib.a lib/libgtest.a || bignumberlib/libbignumberlib_lib.a bignumberlib/vectorutilslib/libvectorutilslib_lib.a lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
   LINK_LIBRARIES = bignumberlib/libbignumberlib_lib.a  lib/libgtest.a  lib/libgtest_main.a  bignumberlib/vectorutilslib/libvectorutilslib_lib.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\CMakeFiles\bignumber_tests_run.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = bignumberlib_tests\bignumber_tests_run.exe
-  TARGET_IMPLIB = bignumberlib_tests\libbignumber_tests_run.dll.a
+  TARGET_FILE = bignumberlib\bignumberlib_tests\bignumber_tests_run.exe
+  TARGET_IMPLIB = bignumberlib\bignumberlib_tests\libbignumber_tests_run.dll.a
   TARGET_PDB = bignumber_tests_run.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build bignumberlib_tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build bignumberlib/bignumberlib_tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build bignumberlib_tests/edit_cache: phony bignumberlib_tests/CMakeFiles/edit_cache.util
+build bignumberlib/bignumberlib_tests/edit_cache: phony bignumberlib/bignumberlib_tests/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build bignumberlib_tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
+build bignumberlib/bignumberlib_tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build bignumberlib_tests/rebuild_cache: phony bignumberlib_tests/CMakeFiles/rebuild_cache.util
+build bignumberlib/bignumberlib_tests/rebuild_cache: phony bignumberlib/bignumberlib_tests/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build bignumberlib_tests/list_install_components: phony
+build bignumberlib/bignumberlib_tests/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build bignumberlib_tests/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib_tests/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build bignumberlib_tests/install: phony bignumberlib_tests/CMakeFiles/install.util
+build bignumberlib/bignumberlib_tests/install: phony bignumberlib/bignumberlib_tests/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build bignumberlib_tests/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib_tests/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build bignumberlib_tests/install/local: phony bignumberlib_tests/CMakeFiles/install/local.util
+build bignumberlib/bignumberlib_tests/install/local: phony bignumberlib/bignumberlib_tests/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build bignumberlib_tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib_tests/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build bignumberlib_tests/install/strip: phony bignumberlib_tests/CMakeFiles/install/strip.util
+build bignumberlib/bignumberlib_tests/install/strip: phony bignumberlib/bignumberlib_tests/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/CMakeLists.txt
+# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/CMakeLists.txt
 # =============================================================================
 
 
 #############################################
 # Utility command for edit_cache
 
-build bignumberlib_tests/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build bignumberlib/bignumberlib_tests/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build bignumberlib_tests/googletest/edit_cache: phony bignumberlib_tests/googletest/CMakeFiles/edit_cache.util
+build bignumberlib/bignumberlib_tests/googletest/edit_cache: phony bignumberlib/bignumberlib_tests/googletest/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build bignumberlib_tests/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
+build bignumberlib/bignumberlib_tests/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/rebuild_cache: phony bignumberlib_tests/googletest/CMakeFiles/rebuild_cache.util
+build bignumberlib/bignumberlib_tests/googletest/rebuild_cache: phony bignumberlib/bignumberlib_tests/googletest/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build bignumberlib_tests/googletest/list_install_components: phony
+build bignumberlib/bignumberlib_tests/googletest/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build bignumberlib_tests/googletest/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib_tests/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/install: phony bignumberlib_tests/googletest/CMakeFiles/install.util
+build bignumberlib/bignumberlib_tests/googletest/install: phony bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build bignumberlib_tests/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib_tests/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/install/local: phony bignumberlib_tests/googletest/CMakeFiles/install/local.util
+build bignumberlib/bignumberlib_tests/googletest/install/local: phony bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build bignumberlib_tests/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib_tests/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/install/strip: phony bignumberlib_tests/googletest/CMakeFiles/install/strip.util
+build bignumberlib/bignumberlib_tests/googletest/install/strip: phony bignumberlib/bignumberlib_tests/googletest/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/CMakeLists.txt
+# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -531,12 +531,12 @@ build bignumberlib_tests/googletest/install/strip: phony bignumberlib_tests/goog
 
 build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
-  DEP_FILE = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
   FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/include -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
-  OBJECT_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir
-  OBJECT_FILE_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir\src
+  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/include -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir\src
 
 
 # =============================================================================
@@ -546,9 +546,9 @@ build bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-al
 #############################################
 # Link the static library lib\libgmock.a
 
-build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgmock.a
@@ -563,12 +563,12 @@ build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug bignumberlib_tests/
 
 build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
-  DEP_FILE = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
   FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
-  OBJECT_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir
-  OBJECT_FILE_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir\src
+  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir\src
 
 
 # =============================================================================
@@ -578,9 +578,9 @@ build bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmo
 #############################################
 # Link the static library lib\libgmock_main.a
 
-build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googlemock\CMakeFiles\gmock_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgmock_main.a
@@ -590,70 +590,70 @@ build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug bignumber
 #############################################
 # Utility command for edit_cache
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build bignumberlib_tests/googletest/googlemock/edit_cache: phony bignumberlib_tests/googletest/googlemock/CMakeFiles/edit_cache.util
+build bignumberlib/bignumberlib_tests/googletest/googlemock/edit_cache: phony bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googlemock/rebuild_cache: phony bignumberlib_tests/googletest/googlemock/CMakeFiles/rebuild_cache.util
+build bignumberlib/bignumberlib_tests/googletest/googlemock/rebuild_cache: phony bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build bignumberlib_tests/googletest/googlemock/list_install_components: phony
+build bignumberlib/bignumberlib_tests/googletest/googlemock/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googlemock/install: phony bignumberlib_tests/googletest/googlemock/CMakeFiles/install.util
+build bignumberlib/bignumberlib_tests/googletest/googlemock/install: phony bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googlemock/install/local: phony bignumberlib_tests/googletest/googlemock/CMakeFiles/install/local.util
+build bignumberlib/bignumberlib_tests/googletest/googlemock/install/local: phony bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build bignumberlib_tests/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googlemock && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googlemock/install/strip: phony bignumberlib_tests/googletest/googlemock/CMakeFiles/install/strip.util
+build bignumberlib/bignumberlib_tests/googletest/googlemock/install/strip: phony bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/CMakeLists.txt
+# C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -663,14 +663,14 @@ build bignumberlib_tests/googletest/googlemock/install/strip: phony bignumberlib
 #############################################
 # Order-only phony target for gtest
 
-build cmake_object_order_depends_target_gtest: phony || bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir
+build cmake_object_order_depends_target_gtest: phony || bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
-  DEP_FILE = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
   FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/include -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
-  OBJECT_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir
-  OBJECT_FILE_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir\src
+  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/include -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir\src
 
 
 # =============================================================================
@@ -680,9 +680,9 @@ build bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-al
 #############################################
 # Link the static library lib\libgtest.a
 
-build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgtest.a
@@ -697,12 +697,12 @@ build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug bignumberlib_tests/
 
 build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
-  DEP_FILE = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
   FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest
-  OBJECT_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir
-  OBJECT_FILE_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir\src
+  INCLUDES = -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib -IC:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/include -isystem C:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir\src
 
 
 # =============================================================================
@@ -712,9 +712,9 @@ build bignumberlib_tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gte
 #############################################
 # Link the static library lib\libgtest_main.a
 
-build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug bignumberlib_tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_DIR = bignumberlib\bignumberlib_tests\googletest\googletest\CMakeFiles\gtest_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgtest_main.a
@@ -724,75 +724,75 @@ build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug bignumber
 #############################################
 # Utility command for edit_cache
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build bignumberlib_tests/googletest/googletest/edit_cache: phony bignumberlib_tests/googletest/googletest/CMakeFiles/edit_cache.util
+build bignumberlib/bignumberlib_tests/googletest/googletest/edit_cache: phony bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Alexander\CLionProjects\big-number-arithmetic -BC:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googletest/rebuild_cache: phony bignumberlib_tests/googletest/googletest/CMakeFiles/rebuild_cache.util
+build bignumberlib/bignumberlib_tests/googletest/googletest/rebuild_cache: phony bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build bignumberlib_tests/googletest/googletest/list_install_components: phony
+build bignumberlib/bignumberlib_tests/googletest/googletest/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googletest/install: phony bignumberlib_tests/googletest/googletest/CMakeFiles/install.util
+build bignumberlib/bignumberlib_tests/googletest/googletest/install: phony bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googletest/install/local: phony bignumberlib_tests/googletest/googletest/CMakeFiles/install/local.util
+build bignumberlib/bignumberlib_tests/googletest/googletest/install/local: phony bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build bignumberlib_tests/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib_tests/googletest/googletest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND bignumberlib/bignumberlib_tests/googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\Alexander\CLionProjects\big-number-arithmetic\cmake-build-debug\bignumberlib\bignumberlib_tests\googletest\googletest && C:\Users\Alexander\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build bignumberlib_tests/googletest/googletest/install/strip: phony bignumberlib_tests/googletest/googletest/CMakeFiles/install/strip.util
+build bignumberlib/bignumberlib_tests/googletest/googletest/install/strip: phony bignumberlib/bignumberlib_tests/googletest/googletest/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
 
 build bignumber_run: phony bignumber_run.exe
 
-build bignumber_tests_run: phony bignumberlib_tests/bignumber_tests_run.exe
+build bignumber_tests_run: phony bignumberlib/bignumberlib_tests/bignumber_tests_run.exe
 
-build bignumber_tests_run.exe: phony bignumberlib_tests/bignumber_tests_run.exe
+build bignumber_tests_run.exe: phony bignumberlib/bignumberlib_tests/bignumber_tests_run.exe
 
 build bignumberlib_lib: phony bignumberlib/libbignumberlib_lib.a
 
@@ -826,14 +826,42 @@ build vectorutilslib_lib: phony bignumberlib/vectorutilslib/libvectorutilslib_li
 #############################################
 # Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug
 
-build all: phony bignumber_run.exe bignumberlib/all bignumberlib_tests/all
+build all: phony bignumber_run.exe bignumberlib/all
 
 # =============================================================================
 
 #############################################
 # Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib
 
-build bignumberlib/all: phony bignumberlib/libbignumberlib_lib.a bignumberlib/vectorutilslib/all
+build bignumberlib/all: phony bignumberlib/libbignumberlib_lib.a bignumberlib/vectorutilslib/all bignumberlib/bignumberlib_tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests
+
+build bignumberlib/bignumberlib_tests/all: phony bignumberlib/bignumberlib_tests/bignumber_tests_run.exe bignumberlib/bignumberlib_tests/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest
+
+build bignumberlib/bignumberlib_tests/googletest/all: phony bignumberlib/bignumberlib_tests/googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest/googlemock
+
+build bignumberlib/bignumberlib_tests/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a bignumberlib/bignumberlib_tests/googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib/bignumberlib_tests/googletest/googletest
+
+build bignumberlib/bignumberlib_tests/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 
@@ -843,48 +871,20 @@ build bignumberlib/all: phony bignumberlib/libbignumberlib_lib.a bignumberlib/ve
 build bignumberlib/vectorutilslib/all: phony bignumberlib/vectorutilslib/libvectorutilslib_lib.a
 
 # =============================================================================
-
-#############################################
-# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests
-
-build bignumberlib_tests/all: phony bignumberlib_tests/bignumber_tests_run.exe bignumberlib_tests/googletest/all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest
-
-build bignumberlib_tests/googletest/all: phony bignumberlib_tests/googletest/googlemock/all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest/googlemock
-
-build bignumberlib_tests/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a bignumberlib_tests/googletest/googletest/all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/Users/Alexander/CLionProjects/big-number-arithmetic/cmake-build-debug/bignumberlib_tests/googletest/googletest
-
-build bignumberlib_tests/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
-
-# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/cmake/gmock.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/Config.cmake.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/gtest.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/cmake/gmock.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/Config.cmake.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/gtest.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/internal_utils.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/cmake/gmock.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/Config.cmake.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/gtest.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib_tests/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Alexander/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/cmake/gmock.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/CMakeLists.txt C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/Config.cmake.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/gtest.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/bignumberlib_tests/googletest/googletest/cmake/internal_utils.cmake C$:/Users/Alexander/CLionProjects/big-number-arithmetic/bignumberlib/vectorutilslib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

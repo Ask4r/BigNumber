@@ -9,5 +9,3 @@ add_executable(bignumber_run ${SOURCE_FILES})
 include_directories(bignumberlib)
 add_subdirectory(bignumberlib)
 target_link_libraries(bignumber_run bignumberlib_lib)
-
-add_subdirectory(bignumberlib_tests)
